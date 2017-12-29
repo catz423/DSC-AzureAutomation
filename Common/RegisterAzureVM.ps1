@@ -3,11 +3,12 @@
 
 #Registers an Azure VM to a DSC Configuration
 
-$AutomationAccountName = "DanTest-Auto"
-$AutomationRGName = "DanTest-Auto-RG"
-$AzureVMRGName = "TFTest_RG_VMs"
+$AutomationAccountName = "DanTest1"
+$AutomationRGName = "DanTest1-AzureAuto"
+$AzureVMRGName = "TFTest_MGMT_App_RG"
 $AzureVMName = "TFTestVM0"
-$AzureVMLocation = "EastUS"
-$NodeConfiguration = "FileResourceExample.locahost"
+$AzureVMLocation = "SouthCentralUS"
+$NodeConfiguration = "FileResource.locahost"
+$ConfigurationMode = "ApplyAndAutocorrect" #ApplyAndMonitor is default
 
-Register-AzureRmAutomationDscNode -AutomationAccountName $AutomationAccountName -AzureVMResourceGroup $AzureVMRGName -AzureVMName $AzureVMName -AzureVMLocation $AzureVMLocation -ResourceGroupName $AutomationRGName -NodeConfigurationName $NodeConfiguration
+Register-AzureRmAutomationDscNode -AutomationAccountName $AutomationAccountName -AzureVMResourceGroup $AzureVMRGName -AzureVMName $AzureVMName -AzureVMLocation $AzureVMLocation -ResourceGroupName $AutomationRGName -NodeConfigurationName $NodeConfiguration -ConfigurationMode $ConfigurationMode

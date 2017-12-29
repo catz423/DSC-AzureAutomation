@@ -1,5 +1,5 @@
 
-Configuration FileResourceExample 
+Configuration FileResource
 {
     Node "locahost"
     {

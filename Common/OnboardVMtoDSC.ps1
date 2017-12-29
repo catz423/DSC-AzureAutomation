@@ -94,12 +94,12 @@ Configuration DscMetaConfigs
 # Create the metaconfigurations
 # TODO: edit the below as needed for your use case
 $Params = @{
-    RegistrationUrl = 'https://wcus-agentservice-prod-1.azure-automation.net/accounts/ec689ee9-18ee-4000-880c-0af1e950844a';
-    RegistrationKey = 'zu3LdeQLXNoDGxsKcRd0FjW4/dNgayZWvEUXKo7CpbMnYOBPtgirMIdOnUsW9uThUjBdqfgbUskotIDk/hX+mw==';
+    RegistrationUrl = 'https://scus-agentservice-prod-1.azure-automation.net/accounts/ab34e2f6-07a3-4bec-8a22-4e351014c7bd';
+    RegistrationKey = 'Ldi85cfGsUUIi4ZoivearrV74Rt5sJsYpur4rgf01U+fgcHsxbF4zYQX4vPM+c9pwZA3s76VzDmxXomwe7XXJA==';
     #ComputerName = @('<some VM to onboard>', '<some other VM to onboard>');
     #ComputerName = @('DC01');
     ComputerName = @($env:computername);
-    NodeConfigurationName = 'IISWebServer.localhost';
+    NodeConfigurationName = 'FileResource.localhost';
     RefreshFrequencyMins = 30;
     ConfigurationModeFrequencyMins = 15;
     RebootNodeIfNeeded = $False;
